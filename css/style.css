@@ -53,11 +53,3 @@ img{
 .verso {
     transform: rotateY(180deg);
 }
-
-.carta:active .verso {
-    transform: rotateY(0deg);
-}
-
-.carta:active .frente {
-    transform: rotateY(-180deg);
-}

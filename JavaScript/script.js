@@ -1,6 +1,13 @@
 let numeroCartas = prompt("Escolha um número par entre 4 e 14 para jogar:")
 let validacao = 0;
 let cartasContadas = [];
+let primeiraCarta;
+let segundaCarta;
+let contagem = 1;
+let carta1;
+let carta2;
+let vencer = 0;
+let numeroJogadas = 0;
 
 while(validacao<1){
 if(numeroCartas > 14 || numeroCartas < 4 || numeroCartas%2 !== 0){
@@ -10,130 +17,130 @@ if(numeroCartas > 14 || numeroCartas < 4 || numeroCartas%2 !== 0){
 }
 }
 const cartas = [
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/bobrossparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/bobrossparrot.gif" alt="bobrossparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/bobrossparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/bobrossparrot.gif" alt="bobrossparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/explodyparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/explodyparrot.gif" alt="explodyparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/explodyparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/explodyparrot.gif" alt="explodyparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/fiestaparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/fiestaparrot.gif" alt="fiestaparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/fiestaparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/fiestaparrot.gif" alt="fiestaparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/metalparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/metalparrot.gif" alt="metalparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/metalparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/metalparrot.gif" alt="metalparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/revertitparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/revertitparrot.gif" alt="revertitparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/revertitparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/revertitparrot.gif" alt="revertitparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/tripletsparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/tripletsparrot.gif" alt="tripletsparrot">
+</figure>
 </div>`,
 
 `<div onclick="cartaClicada(this) " class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/tripletsparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/tripletsparrot.gif" alt="tripletsparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/unicornparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/unicornparrot.gif" alt="unicornparrot">
+</figure>
 </div>`,
 
-`<div onclick="cartaClicada(this), virarCarta(this)" class="carta" data-identifier="card">
-<div class="frente face" data-identifier="back-face">
+`<div class="carta" data-identifier="card">
+<div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
     <img src="/imagens/front.png" alt="Frente da Carta">
 </div>
-<div class="verso face" data-identifier="front-face">
-    <img src="/gifs/unicornparrot.gif" alt="">
-</div>
+<figure class="verso face" data-identifier="front-face">
+    <img src="/gifs/unicornparrot.gif" alt="unicornparrot">
+</figure>
 </div>`
 ];
 
@@ -151,24 +158,39 @@ for(let contador = 0; contador < numeroCartas; contador++){
 }
 
 function virarCarta(virar){
-    virar.querySelector(".vers").classlist.add(verso)
-    virar.querySelector(".frent").classlist.add(frente)
+    virar.parentNode.querySelector(".verso").style.transform ="rotateY(0deg)";
+    virar.parentNode.querySelector(".frente").style.transform ="rotateY(-180deg)";
 }
 
 function cartaClicada(cartaSelecionada){
-    let contagem = 1;
-    let primeiraCarta;
-    let segundaCarta;
-    if(contagem===1){
-        primeiraCarta = cartaSelecionada.querySelector(".verso img").innerHTML;
+    virarCarta(cartaSelecionada);
+    if(contagem === 1){
+        carta1 = cartaSelecionada.parentNode;
+        primeiraCarta = cartaSelecionada.parentNode.querySelector("figure img").alt;
         contagem = 2;
+        numeroJogadas++;
     }else if(contagem === 2){
-        segundaCarta = cartaSelecionada.querySelector(".verso img").innerHTML;
-        if(primeiraCarta === segundaCarta){
-
+        contagem = 3;
+        document.querySelectorAll(".frente").onclick = "";
+        carta2 = cartaSelecionada.parentNode;
+        segundaCarta = cartaSelecionada.parentNode.querySelector("figure img").alt;
+        numeroJogadas++;
+        if(primeiraCarta !== segundaCarta){
+            setTimeout(desvirar, 1000);
         }else{
-
+            vencer++;
+            contagem = 1;
+            if(vencer === numeroCartas/2){
+                alert(`Você ganhou em ${numeroJogadas} jogadas!`);
+            }
         }
     }
 }
+function desvirar(){
+    carta1.querySelector(".verso").style.transform ="rotateY(180deg)";
+    carta1.querySelector(".frente").style.transform ="rotateY(0deg)";
+    carta2.querySelector(".verso").style.transform ="rotateY(180deg)";
+    carta2.querySelector(".frente").style.transform ="rotateY(0deg)";
+    contagem = 1;
+    }
 
