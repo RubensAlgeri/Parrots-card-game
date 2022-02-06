@@ -1,4 +1,4 @@
-let numeroCartas = 0;
+let numeroCartas = prompt("Escolha um número par entre 4 e 14 para jogar");
 let validacao = 0;
 let cartasContadas = [];
 let primeiraCarta;
@@ -205,6 +205,7 @@ function cartaClicada(cartaSelecionada) {
 
                     if (resposta === 's') {
                         relogio.innerHTML = 0;
+                        validacao = 0;
                         respostaSatisfatoria = 2;
                         contagem = 0;
                         vencer = 0;
