@@ -1,13 +1,14 @@
-let numeroCartas = prompt("Escolha um número par entre 4 e 14 para jogar:")
+let numeroCartas=0;
 let validacao = 0;
 let cartasContadas = [];
 let primeiraCarta;
 let segundaCarta;
-let contagem = 1;
+let contagem = 0;
 let carta1;
 let carta2;
 let vencer = 0;
 let numeroJogadas = 0;
+let respostaSatisfatoria = 0;
 
 while(validacao<1){
 if(numeroCartas > 14 || numeroCartas < 4 || numeroCartas%2 !== 0){
@@ -161,8 +162,14 @@ function virarCarta(virar){
     virar.parentNode.querySelector(".verso").style.transform ="rotateY(0deg)";
     virar.parentNode.querySelector(".frente").style.transform ="rotateY(-180deg)";
 }
+let intervalo;
 
 function cartaClicada(cartaSelecionada){
+    respostaSatisfatoria = 0;
+    if(contagem===0){
+    intervalo = setInterval(aumentarContagem, 1000);
+    contagem = 1;
+    }
     virarCarta(cartaSelecionada);
     if(contagem === 1){
         carta1 = cartaSelecionada.parentNode;
@@ -175,13 +182,43 @@ function cartaClicada(cartaSelecionada){
         carta2 = cartaSelecionada.parentNode;
         segundaCarta = cartaSelecionada.parentNode.querySelector("figure img").alt;
         numeroJogadas++;
+        selecionarCartas();
         if(primeiraCarta !== segundaCarta){
             setTimeout(desvirar, 1000);
+            setTimeout(deselecionarCartas, 1000);
         }else{
+            deselecionarCartas();
             vencer++;
             contagem = 1;
-            if(vencer === numeroCartas/2){
+            if (vencer === numeroCartas / 2) {
+                clearInterval(intervalo);
                 alert(`Você ganhou em ${numeroJogadas} jogadas!`);
+                while (respostaSatisfatoria < 1) {
+                    let resposta = prompt("Quer jogar novamente? s/n");
+                    if (resposta === 's') {
+                        relogio.innerHTML = 0;
+                        respostaSatisfatoria = 2;
+                        contagem = 0;
+                        vencer = 0;
+                        numeroJogadas = 0;
+                        clearInterval(intervalo);
+                        const deClasses = document.querySelectorAll(".verso")
+
+                        deClasses.forEach(element => {
+                            element.style.transform = "rotateY(180deg)";
+                        });
+                        const dClasses = document.querySelectorAll(".frente")
+
+                        dClasses.forEach(element => {
+                            element.style.transform = "rotateY(0deg)";
+                        });
+                    } else if (resposta === 'n') {
+                        alert("Obrigado por jogar, volte sempre!!!")
+                        respostaSatisfatoria = 2;
+                    }else{
+                        alert("Por favor digite apenas s para sim ou n para não.");                        
+                    }
+                }
             }
         }
     }
@@ -192,5 +229,25 @@ function desvirar(){
     carta2.querySelector(".verso").style.transform ="rotateY(180deg)";
     carta2.querySelector(".frente").style.transform ="rotateY(0deg)";
     contagem = 1;
-    }
+}
+const relogio = document.querySelector(".relogio");
 
+function aumentarContagem(){
+    relogio.innerHTML = parseInt(relogio.innerHTML) + 1;
+}
+
+function selecionarCartas(){
+const demoClasses = document.querySelectorAll('.frente');
+
+demoClasses.forEach(element => {
+    element.removeAttribute("onclick");
+});
+}
+
+function deselecionarCartas(){
+    const demClasses = document.querySelectorAll('.frente');
+    
+    demClasses.forEach(element => {
+        element.setAttribute("onclick", "cartaClicada(this);");
+    });
+    }

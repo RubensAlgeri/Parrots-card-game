@@ -16,6 +16,13 @@ p{
     text-align: left;
     margin: 40px auto 47px auto;
 }
+.relogio{
+    color: red;
+    font-size: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
 main{
     display: flex;
     flex-wrap: wrap;
