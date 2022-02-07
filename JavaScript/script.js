@@ -15,127 +15,127 @@ const relogio = document.querySelector(".relogio");
 const cartas = [
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/bobrossparrot.gif" alt="bobrossparrot">
+        <img src="gifs/bobrossparrot.gif" alt="bobrossparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/bobrossparrot.gif" alt="bobrossparrot">
+        <img src="gifs/bobrossparrot.gif" alt="bobrossparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/explodyparrot.gif" alt="explodyparrot">
+        <img src="gifs/explodyparrot.gif" alt="explodyparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/explodyparrot.gif" alt="explodyparrot">
+        <img src="gifs/explodyparrot.gif" alt="explodyparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/fiestaparrot.gif" alt="fiestaparrot">
+        <img src="gifs/fiestaparrot.gif" alt="fiestaparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/fiestaparrot.gif" alt="fiestaparrot">
+        <img src="gifs/fiestaparrot.gif" alt="fiestaparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/metalparrot.gif" alt="metalparrot">
+        <img src="gifs/metalparrot.gif" alt="metalparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/metalparrot.gif" alt="metalparrot">
+        <img src="gifs/metalparrot.gif" alt="metalparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/revertitparrot.gif" alt="revertitparrot">
+        <img src="gifs/revertitparrot.gif" alt="revertitparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/revertitparrot.gif" alt="revertitparrot">
+        <img src="gifs/revertitparrot.gif" alt="revertitparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/tripletsparrot.gif" alt="tripletsparrot">
+        <img src="gifs/tripletsparrot.gif" alt="tripletsparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/tripletsparrot.gif" alt="tripletsparrot">
+        <img src="gifs/tripletsparrot.gif" alt="tripletsparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/unicornparrot.gif" alt="unicornparrot">
+        <img src="gifs/unicornparrot.gif" alt="unicornparrot">
     </figure>
 </article>`,
 
     `<article class="carta" data-identifier="card">
     <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="verso da Carta">
+        <img src="imagens/front.png" alt="verso da Carta">
     </div>
     <figure class="frente face" data-identifier="front-face">
-        <img src="/gifs/unicornparrot.gif" alt="unicornparrot">
+        <img src="gifs/unicornparrot.gif" alt="unicornparrot">
         </figure>
 <articlev>`
 ];
@@ -184,7 +184,7 @@ function cartaClicada(cartaSelecionada) {
             contagem = 1;
 
             if (vencer === numeroCartas / 2) {
-                
+
                 clearInterval(intervalo);
                 alert(`Você ganhou em ${numeroJogadas} jogadas!`);
 
