@@ -14,16 +14,17 @@ p{
     line-height: 66px;
     letter-spacing: -0.004em;
     text-align: center;
-    margin: 40px auto 0 auto;
+    margin: 40px auto 100px auto;
 }
 .relogio{
     color: red;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     height: 30px;
-    margin-top: 210px;
-    margin-bottom: 50px;
-    margin-right: 10vw;
+    position: fixed;
+    right: 75px;
+    top: 165px;
+    
 }
 main{
     display: flex;
@@ -59,6 +60,11 @@ img{
     border-radius: 5px;
 }
 
-.verso {
+.frente {
     transform: rotateY(180deg);
+}
+@media (max-width: 753px){
+    .relogio{
+        visibility: hidden;
+    }
 }

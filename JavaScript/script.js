@@ -13,128 +13,128 @@ let intervalo;
 const relogio = document.querySelector(".relogio");
 
 const cartas = [
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/bobrossparrot.gif" alt="bobrossparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/bobrossparrot.gif" alt="bobrossparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/explodyparrot.gif" alt="explodyparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/explodyparrot.gif" alt="explodyparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/fiestaparrot.gif" alt="fiestaparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/fiestaparrot.gif" alt="fiestaparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/metalparrot.gif" alt="metalparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/metalparrot.gif" alt="metalparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/revertitparrot.gif" alt="revertitparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/revertitparrot.gif" alt="revertitparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/tripletsparrot.gif" alt="tripletsparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/tripletsparrot.gif" alt="tripletsparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/unicornparrot.gif" alt="unicornparrot">
     </figure>
 </article>`,
 
-`<article class="carta" data-identifier="card">
-    <div onclick="cartaClicada(this)" class="frente face" data-identifier="back-face">
-        <img src="/imagens/front.png" alt="Frente da Carta">
+    `<article class="carta" data-identifier="card">
+    <div onclick="cartaClicada(this)" class="verso face" data-identifier="back-face">
+        <img src="/imagens/front.png" alt="verso da Carta">
     </div>
-    <figure class="verso face" data-identifier="front-face">
+    <figure class="frente face" data-identifier="front-face">
         <img src="/gifs/unicornparrot.gif" alt="unicornparrot">
         </figure>
 <articlev>`
@@ -142,47 +142,49 @@ const cartas = [
 
 iniciar();
 
-destribuirCartas();
+distribuirCartas();
 
 function cartaClicada(cartaSelecionada) {
 
-    respostaSatisfatoria = 0;
+    respostaSatisfatoria = 0; //Essa variavel controla o while da pergunta jogar novamente
 
-    if (contagem === 0) {
+    if (contagem === 0) { //Esse if só serve para iniciar o contador ao clicar
+
         intervalo = setInterval(aumentarContagem, 1000);
         contagem = 1;
     }
 
     virarCarta(cartaSelecionada);
 
-    if (contagem === 1) {
+    if (contagem === 1) { // Este if e else if irão armazenar a primeira e segunda carta clicadas
 
         carta1 = cartaSelecionada.parentNode;
         primeiraCarta = cartaSelecionada.parentNode.querySelector("figure img").alt;
-        contagem = 2;
         numeroJogadas++;
+        contagem = 2;
 
     } else if (contagem === 2) {
 
-        contagem = 3;
-        document.querySelectorAll(".frente").onclick = "";
+        document.querySelectorAll(".verso").onclick = "";
         carta2 = cartaSelecionada.parentNode;
         segundaCarta = cartaSelecionada.parentNode.querySelector("figure img").alt;
         numeroJogadas++;
-        selecionarCartas();
+        contagem = 3;
+        desabilitarClick();
 
-        if (primeiraCarta !== segundaCarta) {
+        if (primeiraCarta !== segundaCarta) { //O valor de comparação das cartas é através do atributo alt das mesmas
 
             setTimeout(desvirar, 1000);
-            setTimeout(deselecionarCartas, 1000);
+            setTimeout(habilitarClick, 1000);
 
         } else {
 
-            deselecionarCartas();
+            habilitarClick();
             vencer++;
             contagem = 1;
 
             if (vencer === numeroCartas / 2) {
+                
                 clearInterval(intervalo);
                 alert(`Você ganhou em ${numeroJogadas} jogadas!`);
 
@@ -202,14 +204,10 @@ function cartaClicada(cartaSelecionada) {
 
                         clearInterval(intervalo);
 
-                        const deClasses = document.querySelectorAll("article")
-
-                        deClasses.forEach(element => {
-                            element.remove();
-                        });
+                        removerCartas();
 
                         iniciar();
-                        destribuirCartas();
+                        distribuirCartas();
 
                     } else if (resposta === 'n') {
 
@@ -238,7 +236,7 @@ function iniciar() {
 function comparador() {
     return Math.random() - 0.5;
 }
-function destribuirCartas() {
+function distribuirCartas() {
     for (let i = 0; i < numeroCartas; i++) {
         cartasContadas.push(cartas[i]);
         cartasContadas.sort(comparador);
@@ -250,34 +248,48 @@ function destribuirCartas() {
 }
 
 function virarCarta(virar) {
-    virar.parentNode.querySelector(".verso").style.transform = "rotateY(0deg)";
-    virar.parentNode.querySelector(".frente").style.transform = "rotateY(-180deg)";
+
+    virar.parentNode.querySelector(".frente").style.transform = "rotateY(0deg)";
+    virar.parentNode.querySelector(".verso").style.transform = "rotateY(-180deg)";
 }
 
 function desvirar() {
-    carta1.querySelector(".verso").style.transform = "rotateY(180deg)";
-    carta1.querySelector(".frente").style.transform = "rotateY(0deg)";
-    carta2.querySelector(".verso").style.transform = "rotateY(180deg)";
-    carta2.querySelector(".frente").style.transform = "rotateY(0deg)";
+
+    carta1.querySelector(".frente").style.transform = "rotateY(180deg)";
+    carta1.querySelector(".verso").style.transform = "rotateY(0deg)";
+    carta2.querySelector(".frente").style.transform = "rotateY(180deg)";
+    carta2.querySelector(".verso").style.transform = "rotateY(0deg)";
     contagem = 1;
 }
 
 function aumentarContagem() {
+
     relogio.innerHTML = parseInt(relogio.innerHTML) + 1;
 }
 
-function selecionarCartas() {
-    const demoClasses = document.querySelectorAll('.frente');
+function desabilitarClick() {
+
+    const demoClasses = document.querySelectorAll('.verso');
 
     demoClasses.forEach(element => {
         element.removeAttribute("onclick");
     });
 }
 
-function deselecionarCartas() {
-    const demClasses = document.querySelectorAll('.frente');
+function habilitarClick() {
+
+    const demClasses = document.querySelectorAll('.verso');
 
     demClasses.forEach(element => {
         element.setAttribute("onclick", "cartaClicada(this);");
+    });
+}
+
+function removerCartas() {
+
+    const deClasses = document.querySelectorAll("article")
+
+    deClasses.forEach(element => {
+        element.remove();
     });
 }
